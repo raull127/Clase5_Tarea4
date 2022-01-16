@@ -1,8 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////
 //TAREA4: En otro archivo distinto,
 // Por cada clase de r/argentina programa existente (son 25), vamos a pedir:
 // horas, minutos y segundos de cada video. Ej. Si un video dura
@@ -18,7 +16,6 @@ for (let i = 0; i < arrayPrueba.length; i++) {
 } */
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 document.querySelector("#planilla-videos").onsubmit = function () {
     const segundos = document.querySelectorAll(".segundos");
     let contadorSegundos = 0;
@@ -27,7 +24,6 @@ document.querySelector("#planilla-videos").onsubmit = function () {
     }
     const segundosFinales = contadorSegundos % 60;
     const segundosRestantes = Math.floor(contadorSegundos / 60);
-    ///////////////
     const minutos = document.querySelectorAll(".minutos");
     let contadorMinutos = 0;
     for (let i = 0; i < minutos.length; i++) {
@@ -36,14 +32,12 @@ document.querySelector("#planilla-videos").onsubmit = function () {
     contadorMinutos = contadorMinutos + segundosRestantes; 
     const minutosFinales = contadorMinutos % 60; 
     const minutosRestantes = Math.floor(contadorMinutos / 60); 
-    ///////////////
     const horas = document.querySelectorAll(".horas");
     let contadorHoras = 0;
     for (let i = 0; i < horas.length; i++) {
         contadorHoras = contadorHoras + Number(horas[i].value);
     }
     const horasFinales = contadorHoras + minutosRestantes;
-    //////////////
     console.log(`Horas: ${horasFinales} - Minutos: ${minutosFinales} - Segundos: ${segundosFinales}`)
 
     document.querySelector("#tiempo-video").innerText = `El tiempo de los videos de Fabricio suma ... \n ${horasFinales} horas ${minutosFinales} minutos y ${segundosFinales} segundos `
