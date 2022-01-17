@@ -40,7 +40,7 @@ document.querySelector("#planilla-videos").onsubmit = function () {
     const horasFinales = contadorHoras + minutosRestantes;
     console.log(`Horas: ${horasFinales} - Minutos: ${minutosFinales} - Segundos: ${segundosFinales}`)
 
-    document.querySelector("#tiempo-video").innerText = `El tiempo de los videos de Fabricio suma ... \n ${horasFinales} horas ${minutosFinales} minutos y ${segundosFinales} segundos `
+    document.querySelector("#mensaje-final-videos").innerText = `${horasFinales} horas ${minutosFinales} minutos y ${segundosFinales} segundos `
 
     return false;
 }
